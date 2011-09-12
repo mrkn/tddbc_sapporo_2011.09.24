@@ -27,3 +27,11 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+# Gems used only for testing and not required
+# in production environments by default.
+group :test do
+  gem 'database_cleaner'
+  gem 'rspec-rails'
+  gem 'cucumber-rails'
+  gem 'capybara'
+end
