@@ -1,4 +1,6 @@
 TddbcRuby::Application.routes.draw do
+  namespace :tddbc do resources :rooms end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

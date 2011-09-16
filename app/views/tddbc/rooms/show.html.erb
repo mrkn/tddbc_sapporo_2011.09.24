@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @tddbc_room.name %>
+</p>
+
+<p>
+  <b>Capacity:</b>
+  <%= @tddbc_room.capacity %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @tddbc_room.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_tddbc_room_path(@tddbc_room) %> |
+<%= link_to 'Back', tddbc_rooms_path %>

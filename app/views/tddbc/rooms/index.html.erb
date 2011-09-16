@@ -1,0 +1,27 @@
+<h1>Listing tddbc_rooms</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Capacity</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tddbc_rooms.each do |tddbc_room| %>
+  <tr>
+    <td><%= tddbc_room.name %></td>
+    <td><%= tddbc_room.capacity %></td>
+    <td><%= tddbc_room.location %></td>
+    <td><%= link_to 'Show', tddbc_room %></td>
+    <td><%= link_to 'Edit', edit_tddbc_room_path(tddbc_room) %></td>
+    <td><%= link_to 'Destroy', tddbc_room, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Room', new_tddbc_room_path %>

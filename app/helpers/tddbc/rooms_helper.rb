@@ -1,0 +1,2 @@
+module Tddbc::RoomsHelper
+end

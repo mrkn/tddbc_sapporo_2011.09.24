@@ -1,0 +1,29 @@
+<%= form_for(@tddbc_room) do |f| %>
+  <% if @tddbc_room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tddbc_room.errors.count, "error") %> prohibited this tddbc_room from being saved:</h2>
+
+      <ul>
+      <% @tddbc_room.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :capacity %><br />
+    <%= f.number_field :capacity %>
+  </div>
+  <div class="field">
+    <%= f.label :location %><br />
+    <%= f.text_area :location %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
