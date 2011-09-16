@@ -12,3 +12,7 @@ Given /^システムの "([^"]*)" が表示されている$/ do |page_name|
     flunk
   end
 end
+
+Given /^システムに "([^"]*)" が登録されている$/ do |room_name|
+  Tddbc::Room.create({name: room_name})
+end
